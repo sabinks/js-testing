@@ -1,5 +1,5 @@
 export function max(a, b) {
-  return a >= b ? a : b
+  return a >= b ? a : b;
 }
 
 export function fizzBuzz(n) {
@@ -11,10 +11,10 @@ export function fizzBuzz(n) {
 
 export function calculateAverage(numbers) {
   if (numbers.length == 0) {
-    return NaN
+    return NaN;
   }
-  const sum = numbers.reduce((sum, current) => sum + current, 0)
-  return sum / numbers.length
+  const sum = numbers.reduce((sum, current) => sum + current, 0);
+  return sum / numbers.length;
 }
 
 export function factorial(num) {
@@ -22,7 +22,7 @@ export function factorial(num) {
     return undefined;
   }
   if (num == 0 || num == 1) {
-    return 1
+    return 1;
   }
   return factorial(num - 1) * num;
   // var rval = 1;
