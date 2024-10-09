@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 function validAnagram(string1, string2) {
   if (string1 == '' && string2 == '') return true;
   if (string1.length !== string2.length) return false;

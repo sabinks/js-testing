@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 function validAnagram(string1, string2) {
   if (string1 == '' && string2 == '') return true;
   if (string1.length !== string2.length) return false;
@@ -6,8 +7,8 @@ function validAnagram(string1, string2) {
     lookUp[char] = (lookUp[char] || 0) + 1;
   }
 
-  for (var i = 0; i < second.length; i++) {
-    var char = second[i];
+  for (var i = 0; i < string2.length; i++) {
+    var char = string2[i];
     //can't find letter or letter is zero, return false and is not anagram
     if (!lookUp[char]) {
       return false;

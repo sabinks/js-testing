@@ -9,8 +9,8 @@ function same(array1, array2) {
   for (var val of array1) {
     freq1[val] = (freq1[val] || 0) + 1;
   }
-  for (var val of array2) {
-    freq2[val] = (freq2[val] || 0) + 1;
+  for (var value of array2) {
+    freq2[value] = (freq2[value] || 0) + 1;
   }
 
   for (var key in freq1) {

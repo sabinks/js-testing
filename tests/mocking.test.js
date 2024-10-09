@@ -1,4 +1,4 @@
-import { vi, it, expect, describe, beforeEach } from 'vitest';
+import { vi, it, expect, describe } from 'vitest';
 import {
   getDiscount,
   getPriceInCurrency,
@@ -41,7 +41,7 @@ describe('test suite', () => {
   it('test case', () => {
     const greet = vi.fn();
     greet.mockImplementation((name) => `Hello ${name}`);
-    const result = greet('Saksham');
+    greet('Saksham');
     // const result1 = greet('Saksham')
     expect(greet).toHaveBeenCalled();
     expect(greet).toHaveBeenCalledWith('Saksham');
@@ -100,7 +100,7 @@ describe('submitOrder', () => {
   it('should charge customer', async () => {
     vi.mocked(charge).mockResolvedValue({ status: 'success' });
 
-    const paymentResult = await submitOrder(order, creditCard);
+    await submitOrder(order, creditCard);
 
     expect(charge).toBeCalledWith(creditCard, order.totalAmount);
   });
@@ -138,7 +138,7 @@ describe('signUp', () => {
   });
 
   it('should send welcome email if email is valid', async () => {
-    const result = await signUp(email);
+    await signUp(email);
     expect(sendEmail).toHaveBeenCalledOnce();
     const args = vi.mocked(sendEmail).mock.calls[0];
     expect(args[0]).toBe(email);
