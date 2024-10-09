@@ -1,6 +1,6 @@
 export function calculateDiscount(price: number, discountCode: string) {
   if (price <= 0) {
-    return 'Invalid Price'
+    return 'Invalid Price';
   }
 
   let discount = 0;
@@ -19,4 +19,4 @@ export function calculateDiscount(price: number, discountCode: string) {
   return price - price * discount;
 }
 
-calculateDiscount(10, '')
+calculateDiscount(10, '');
