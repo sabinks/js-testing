@@ -1,4 +1,4 @@
-export function calculateDiscount(price: number, discountCode: number) {
+export function calculateDiscount(price: number, discountCode: string) {
   if (price <= 0) {
     return 'Invalid Price';
   }
