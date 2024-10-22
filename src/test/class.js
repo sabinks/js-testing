@@ -1,9 +1,9 @@
 class Student {
-  constructor(fName, lName, year, late) {
+  constructor(fName, lName, year) {
     this.fName = fName;
     this.lName = lName;
     this.grade = year;
-    this.late = late;
+    this.late = 0;
   }
   fullName() {
     return `Your full name is ${this.fName} ${this.lName}`;
@@ -14,6 +14,10 @@ class Student {
   }
 }
 
-const saksham = new Student('Saksham', 'Shrestha', 'JK', 1);
+const saksham = new Student('Saksham', 'Shrestha', 'JK');
 console.log(saksham);
+saksham.markLate();
+saksham.markLate();
+saksham.markLate();
 console.log(saksham.fullName());
+console.log(saksham.late);
